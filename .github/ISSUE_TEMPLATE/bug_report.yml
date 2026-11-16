@@ -1,0 +1,50 @@
+name: Bug report
+description: Something in XPP or an XPP plugin isn't working right.
+labels: ["bug", "needs-triage"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open XPP
+        2. ...
+    validations:
+      required: true
+  - type: input
+    id: xpp-version
+    attributes:
+      label: XPP version
+      description: Shown on XPP's About page, e.g. 0.1.2859-preview.1
+    validations:
+      required: true
+  - type: input
+    id: plugin
+    attributes:
+      label: Plugin (if any)
+      description: Which XPP plugin was involved, and its version.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where did it happen?
+      options:
+        - XPP desktop app
+        - In game (Trackmania)
+        - Installing or updating
+        - Signing in or account
+        - Website or dashboard
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs, crash details or screenshots
+      description: Attach XPP logs or screenshots if you can. Remove anything private first.
